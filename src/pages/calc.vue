@@ -102,7 +102,7 @@ export default {
 <style lang="less">
 .calc{
   width: 1000px;
-  margin: 0 auto;
+  margin: 20px auto 0;
   h1{
     display: flex;
     height: 50px;

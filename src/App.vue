@@ -1,16 +1,28 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Menu></Menu>
+    <main>
+      <router-view/>
+    </main>
   </div>
 </template>
 
 <script>
+import Menu from './components/menu'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Menu
+  },
+  data () {
+    return {
+
+    }
+  }
 }
 </script>
 
-<style>
+<style lang="less">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
