@@ -1,6 +1,6 @@
 <template>
   <div class="calc">
-    <h1><img src="../assets/2.jpg" alt="">宝屌赔率计算器<img src="../assets/3.jpg" alt=""></h1>
+    <h1><img src="../../assets/2.jpg" alt="">宝屌赔率计算器<img src="../../assets/3.jpg" alt=""></h1>
     <el-row :gutter="40">
       <el-col :span="6">
         <el-card header="卡数">
@@ -50,7 +50,7 @@
           header-align="center">
         </el-table-column>
       </el-table>
-      <img style="width: 200px; margin-top: 20px;" src="../assets/1.jpg" alt="">
+      <img style="width: 200px; margin-top: 20px;" src="../../assets/1.jpg" alt="">
       </el-col>
     </el-row>
   </div>
