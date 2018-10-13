@@ -395,7 +395,6 @@ export default {
   }
 }
 
-
 @media only screen and (max-width: 600px) {
   .lottery{
     .scroll-msg{
@@ -440,6 +439,9 @@ export default {
         width: 160px;
         margin: 0 0 10px 0;
       }
+    }
+    .el-dialog{
+      width: 80% !important;
     }
   }
 }
