@@ -112,11 +112,11 @@ export default {
   },
   created () {
     this.storageName = sessionStorage.getItem('gameName') || ''
-    // this.getLotteryMsgList()
-    setInterval(() => {
-      this.getLotteryMsgList()
-      console.log(1)
-    }, 1000)
+    this.getLotteryMsgList()
+    // setInterval(() => {
+    //   this.getLotteryMsgList()
+    //   console.log(1)
+    // }, 1000)
   },
   computed: {
     // ...mapGetters([

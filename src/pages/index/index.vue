@@ -7,17 +7,17 @@
       <p>本网页仅供土星成员娱乐使用，切勿上脑认真，望各位大屌专注游戏和吹逼，早日给大屌找个归宿。<img src="../../assets/1.png" alt=""></p>
     </div>
     <ul class="index-img">
+        <li><img src="../../assets/c.jpg" alt=""></li>
+        <li><img src="../../assets/i.jpg" alt=""></li>
+        <li><img src="../../assets/g.jpg" alt=""></li>
         <li><img src="../../assets/d.jpg" alt=""></li>
-        <li><img src="../../assets/e.jpg" alt=""></li>
         <li><img src="../../assets/f.jpg" alt=""></li>
         <li><img src="../../assets/b.jpg" alt=""></li>
-        <li><img src="../../assets/a.jpg" alt=""></li>
-        <li><img src="../../assets/c.jpg" alt=""></li>
-        <li><img src="../../assets/g.jpg" alt=""></li>
-        <li><img src="../../assets/h.jpg" alt=""></li>
-        <li><img src="../../assets/i.jpg" alt=""></li>
+        <li><img src="../../assets/e.jpg" alt=""></li>
         <li><img src="../../assets/j.jpg" alt=""></li>
         <li><img src="../../assets/k.jpg" alt=""></li>
+        <li><img src="../../assets/a.jpg" alt=""></li>
+        <li><img src="../../assets/h.jpg" alt=""></li>
         <li><img src="../../assets/l.jpg" alt=""></li>
     </ul>
   </div>
@@ -36,7 +36,8 @@ export default {
 <style lang="less">
 .index{
   // background: #f7f7f7;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 20px auto 0;
   position: relative;
   h1{
@@ -52,7 +53,7 @@ export default {
     p{
       text-align: left;
       margin-bottom: 20px;
-      color: #fff;
+      color: #fbee06;
       img{
         width: 20px;
       }
@@ -68,6 +69,21 @@ export default {
     img{
       width: 100%;
       vertical-align: middle;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .index{
+    .index-txt{
+      width: 90%;
+      left: 5%;
+      right: 5%;
+      top: 100px;
+    }
+    .index-img{
+      li{
+        width: 50%;
+      }
     }
   }
 }

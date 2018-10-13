@@ -2,7 +2,7 @@
   <div class="calc">
     <h1><img src="../../assets/2.jpg" alt="">宝屌赔率计算器<img src="../../assets/3.jpg" alt=""></h1>
     <el-row :gutter="40">
-      <el-col :span="6">
+      <el-col :xs="24" :sm="6">
         <el-card header="卡数">
           <el-form label-position="right" label-width="50px" :model="cards">
             <el-form-item v-for="(item, key) in cards" :label="key" :key="key">
@@ -14,7 +14,7 @@
           </el-form>
         </el-card>
       </el-col>
-      <el-col :span="18">
+      <el-col :xs="24" :sm="18">
       <el-table
         :data="tableData"
         border
@@ -101,8 +101,10 @@ export default {
 
 <style lang="less">
 .calc{
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 20px auto 0;
+  overflow: hidden;
   h1{
     display: flex;
     height: 50px;
