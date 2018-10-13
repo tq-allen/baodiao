@@ -12,25 +12,25 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/baodiao-dist',
       name: 'index',
       // component: () => import('@/pages')
       component: index
     },
     {
-      path: '/calc',
+      path: '/baodiao-dist/calc',
       name: 'calc',
       // component: () => import('@/pages/calc')
       component: calc
     },
     {
-      path: '/msgLottery',
+      path: '/baodiao-dist/msgLottery',
       name: 'msgLottery',
       // component: () => import('@/pages/msgLottery')
       component: msgLottery
     },
     {
-      path: '/stWelfare',
+      path: '/baodiao-dist/stWelfare',
       name: 'stWelfare',
       // component: () => import('@/pages/stWelfare')
       component: stWelfare

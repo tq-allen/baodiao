@@ -8,10 +8,10 @@
       text-color="#fff"
       active-text-color="#ffd04b"
       router>
-      <el-menu-item index="/">首页</el-menu-item>
-      <el-menu-item index="/calc">宝屌赔率计算</el-menu-item>
-      <el-menu-item index="/msgLottery">留言抽奖</el-menu-item>
-      <el-menu-item index="/stWelfare">土星福彩</el-menu-item>
+      <el-menu-item index="/baodiao-dist">首页</el-menu-item>
+      <el-menu-item index="/baodiao-dist/calc">宝屌赔率计算</el-menu-item>
+      <el-menu-item index="/baodiao-dist/msgLottery">留言抽奖</el-menu-item>
+      <el-menu-item index="/baodiao-dist/stWelfare">土星福彩</el-menu-item>
     </el-menu>
   </div>
 </template>

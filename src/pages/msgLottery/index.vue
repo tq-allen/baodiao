@@ -112,6 +112,7 @@ export default {
   },
   created () {
     this.storageName = sessionStorage.getItem('gameName') || ''
+    this.getLotteryMsgList()
   },
   computed: {
     // ...mapGetters([
@@ -227,6 +228,8 @@ export default {
         query.get('5bbb05d9fb4ffe00693477c3').then(msgListItem2 => {
           this.msgList = msgListItem2.get('msg')
         })
+        // 多一次从服务器获取消息列表，获取刚添加的这一条
+        this.getLotteryMsgList()
       }, function (error) {
         // 异常处理
         console.error(error)
@@ -269,6 +272,10 @@ export default {
       })
     },
     setNum () {
+      if (!this.lotteryNum) {
+        this.$message.warning('请输入抽奖人数')
+        return false
+      }
       this.lotteryNumVisible = false
     },
     openLottery () {
@@ -317,6 +324,12 @@ export default {
       }, function (error) {
         // 异常处理
         console.error(error)
+      })
+    },
+    getLotteryMsgList () {
+      let query = new AV.Query('MsgList')
+      query.get('5bbb05d9fb4ffe00693477c3').then(msgListItem => {
+        this.msgList = msgListItem.get('msg')
       })
     }
   },
