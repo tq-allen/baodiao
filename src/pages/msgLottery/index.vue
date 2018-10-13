@@ -33,9 +33,9 @@
       </el-form>
     </div>
     <div class="manager-operate" v-if="storageName === 'kim'">
-      <el-button @click="clearMsg">清空上次留言数据</el-button>
-      <el-button @click="lotteryNumVisible = true">设置抽奖人数</el-button>
-      <el-button @click="openLottery">开奖</el-button>
+      <el-button type="warning" @click="clearMsg">清空上次留言数据</el-button>
+      <el-button type="primary" @click="lotteryNumVisible = true">设置抽奖人数</el-button>
+      <el-button type="success" @click="openLottery">开奖</el-button>
       <!-- <span v-if="lotteryNum">已设置抽奖人数：{{ sessionStorage.getItem('lotteryNum') }}</span> -->
     </div>
 
@@ -113,6 +113,10 @@ export default {
   created () {
     this.storageName = sessionStorage.getItem('gameName') || ''
     this.getLotteryMsgList()
+    // let time = setInterval(() => {
+    //   this.getLotteryMsgList()
+    //   console.log(1)
+    // }, 1000)
   },
   computed: {
     // ...mapGetters([
@@ -229,7 +233,8 @@ export default {
           this.msgList = msgListItem2.get('msg')
         })
         // 多一次从服务器获取消息列表，获取刚添加的这一条
-        this.getLotteryMsgList()
+        // this.getLotteryMsgList()
+        // this.getLotteryMsgList()
       }, function (error) {
         // 异常处理
         console.error(error)
@@ -350,7 +355,8 @@ export default {
   background: #f7f7f7;
   padding: 20px;
   .scroll-msg{
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 500px;
     background: #fff;
     border-radius: 10px;
@@ -378,7 +384,8 @@ export default {
     }
   }
   .msg-con{
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin: 20px auto;
   }
   .lottery-result{
@@ -387,4 +394,56 @@ export default {
     }
   }
 }
+
+
+@media only screen and (max-width: 600px) {
+  .lottery{
+    .scroll-msg{
+      height: 400px;
+      .scroll-msg-list{
+        height: 320px;
+      }
+    }
+    .msg-con{
+      max-width: 260px;
+      margin: 20px 0;
+      position: relative;
+      .el-form-item__label{
+        width: 40px !important;
+        line-height: 20px;
+      }
+      .el-form-item__content{
+        margin-left: 40px !important;
+        .el-textarea__inner{
+          height: 60px;
+        }
+        .el-button{
+          width: 60px;
+          height: 60px;
+          padding: 0;
+        }
+      }
+      .el-form-item {
+        + .el-form-item{
+          position: absolute;
+          top: 0;
+          right: -70px;
+        }
+      }
+    }
+    .manager-operate{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .el-button{
+        width: 160px;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+  .el-message-box{
+    width: 300px;
+  }
 </style>

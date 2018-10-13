@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="menu">
     <el-menu
       :default-active="activeIndex"
       class="el-menu-demo"
@@ -33,5 +33,18 @@ export default {
 </script>
 
 <style lang="less">
+.menu{
+  width: 100%;
+  .el-menu-item{
 
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu{
+    .el-menu-item{
+      font-size: 12px;
+    }
+  }
+}
 </style>
